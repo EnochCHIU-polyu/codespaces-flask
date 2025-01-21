@@ -1,10 +1,8 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
 }
 
 code {
@@ -30,6 +28,7 @@ code {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 20px;
 }
 
 .App-link {
@@ -46,4 +45,60 @@ code {
 
 .big {
     font-size: 3rem;
+}
+
+.heart-text {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.big-text {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.small-text {
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #61dafb;
+    color: white;
+}
+
+#randomNumber {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
 }

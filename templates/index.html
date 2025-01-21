@@ -1,22 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+    <script>
+        function fetchRandomNumber() {
+            fetch('/random')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('randomNumber').innerText = data.randomNumber;
+                });
+        }
+    </script>
+</head>
 <body>
     <div class="App">
         <header class="App-header">
             <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
+            <p class="heart-text">
                 GitHub Codespaces <span class="heart">♥️</span> Flask
             </p>
-            <p class="big">
+            <p class="big-text">
                 Hello. I am Enoch CHIU
             </p>
-            <p class="small">
+            <p class="small-text">
                 Edit <code>templates/index.html</code> and refresh to see your changes!
             </p>
+            <button onclick="fetchRandomNumber()">Get Random Number</button>
+            <p class="big-text" id="randomNumber"></p>
         </header>
     </div>
 </body>
-
 </html>
