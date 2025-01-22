@@ -10,7 +10,11 @@
             fetch('/random')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('randomNumber').innerText = data.randomNumber;
+                    const randomNumberElement = document.getElementById('randomNumber');
+                    randomNumberElement.innerText = data.randomNumber;
+                    if (data.randomNumber === 28) {
+                        alert('Congratulations! You got 28!');
+                    }
                 });
         }
     </script>
