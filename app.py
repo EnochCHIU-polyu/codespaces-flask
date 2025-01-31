@@ -21,3 +21,9 @@ def student():
         data = json.load(file)
     return render_template("student.html", students=data['students'])
 
+{
+  "workbench.colorCustomizations": {
+    "editor.background": "#FFFFFF"
+  }
+}
+
